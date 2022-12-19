@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <h1 id="title">Generate a <br><span id="random-password-text">random password</span></h1>
+    <p id="generate-tag">Never use an insecure password again</p>
+    <div id="customization-wrapper">
+        <div id="checkboxWrapper">
+            <label class="container">Lower Case Characters
+            <input id="lowerCaseCharacterCheck" type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+            <label class="container">Upper Case Characters
+            <input id="upperCaseCharacterCheck" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+            <label class="container">Numbers
+            <input id="numberCharacterCheck" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+            <label class="container">Special Characters
+            <input id="specialCharacterCheck" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div id="inpute-range-wrapper"><label class="customText">Password Length</label><br>
+            <div class="range">
+                <div class="sliderValue">
+                    <span id="slideShow">8</span>
+                </div>
+                <div class="field">
+                    <div class="value left">0</div>
+                    <input type="range" min="4" max="20" value="8" steps="1" id="rangeInpute">
+                    <div class="value right">20</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" id="generate-btn" onclick="newPassword()">New Password</button>
+    <div id="styling-line"></div>
+    <div class="tooltip">
+        <input type="text" class="password-output" id="passwordOutput" onclick="copyContent()" onmouseout="outFunc()" readonly>
+        <span class="tooltiptext" id="copyTooltip">Copy to clipboard</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
